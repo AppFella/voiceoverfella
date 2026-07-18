@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Voice Over Fella — Eine Stimme, viele Möglichkeiten | Dominik Jungheim, Sprecher</title>
 <meta name="description" content="Dominik Jungheim — Sprecher, Synchronsprecher & Werbestimme aus NRW. Seit über 15 Jahren die Stimme für BMW, Vodafone, Duracell & Co. Demos anhören, anfragen, fertig.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- Schriften lokal gehostet (kein externer Google-Fonts-Aufruf) -->
+<link href="fonts/fonts.css" rel="stylesheet">
 <style>
 /* ============================================================
    VOICE OVER FELLA — REBRAND 2026
@@ -266,6 +265,27 @@ body:not(.is-playing) .eq i{animation-duration:2.8s}
 .video .ph p{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:rgba(244,236,221,.5);text-transform:uppercase}
 .videos .yt-cta{margin-top:2.4rem;text-align:center}
 @media(max-width:860px){.video-grid{grid-template-columns:1fr}}
+/* Video-Platzhalter bis zur Datenschutz-Zustimmung */
+.video-ph{position:absolute;inset:0;z-index:2;background:var(--ink-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.2rem;gap:.6rem}
+.video-ph .tv{font-size:1.9rem;color:var(--red)}
+.video-ph .vp-title{font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--paper)}
+.video-ph .vp-note{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,236,221,.55);max-width:28ch;line-height:1.6}
+.video-ph .video-ph-btn{font-family:var(--display);font-weight:800;font-size:.9rem;background:var(--red);color:var(--paper);border:2px solid var(--paper);border-radius:999px;padding:.5rem 1.15rem;cursor:pointer;transition:.2s}
+.video-ph .video-ph-btn:hover{background:var(--red-deep)}
+
+/* ============ CONSENT-BANNER ============ */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:2000;transform:translateY(115%);transition:transform .4s cubic-bezier(.2,.7,.2,1);background:var(--paper);border-top:2px solid var(--ink)}
+.consent.show{transform:none}
+.consent-inner{width:min(1240px,92vw);margin:0 auto;padding:1.1rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.4rem;justify-content:space-between}
+.consent-text{flex:1 1 380px;font-size:.9rem;line-height:1.55}
+.consent-text strong{font-family:var(--display)}
+.consent-text a{color:var(--red-deep);text-decoration:underline;text-underline-offset:2px}
+.consent-actions{display:flex;gap:.7rem;flex-wrap:wrap}
+.consent-btn{font-family:var(--display);font-weight:800;font-size:.92rem;padding:.6rem 1.35rem;border-radius:999px;border:2px solid var(--ink);cursor:pointer;background:var(--paper);color:var(--ink);transition:.2s}
+.consent-btn.accept{background:var(--red);color:var(--paper)}
+.consent-btn.accept:hover{background:var(--red-deep)}
+.consent-btn.decline:hover{background:var(--paper-soft)}
+@media(max-width:560px){.consent-actions{width:100%}.consent-btn{flex:1}}
 
 /* ============ STIMMEN / TESTIMONIALS ============ */
 .quotes{padding:6.5rem 0 5.5rem;overflow:hidden}
@@ -564,26 +584,46 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
       <p style="max-width:38ch;color:rgba(244,236,221,.75)">Ausgewählte Projekte aus Werbung, Synchron und Imagefilm. Mehr davon auf meinem YouTube-Kanal.</p>
     </div>
     <div class="video-grid">
-      <!-- Video einbinden: <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
-      <div class="video reveal"> 
-        <iframe src="https://www.youtube-nocookie.com/embed/jZwkn-0IofQ"
-          title="Werbespot — Voice Over Fella"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; encrypted-media; picture-in-picture"
-          allowfullscreen></iframe>
-        </div>
+      <!-- Video einbinden: data-src wird erst nach Datenschutz-Zustimmung in src umgewandelt -->
       <div class="video reveal">
-          <iframe src="https://www.youtube-nocookie.com/embed/35zqVohc7FA"
+        <iframe data-src="https://www.youtube-nocookie.com/embed/jZwkn-0IofQ"
           title="Werbespot — Voice Over Fella"
           referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; encrypted-media; picture-in-picture"
-          allowfullscreen></iframe>
+          allowfullscreen loading="lazy"></iframe>
+        <div class="video-ph">
+          <span class="tv">▶</span>
+          <p class="vp-title">YouTube-Video</p>
+          <button type="button" class="video-ph-btn">Video laden</button>
+          <span class="vp-note">Externes Video von YouTube. Beim Laden werden Daten an Google übertragen.</span>
+        </div>
       </div>
-      <div class="video reveal">< <iframe src="https://www.youtube-nocookie.com/embed/dGFavuUpigo"
+      <div class="video reveal">
+        <iframe data-src="https://www.youtube-nocookie.com/embed/35zqVohc7FA"
           title="Werbespot — Voice Over Fella"
           referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; encrypted-media; picture-in-picture"
-          allowfullscreen></iframe></div>
+          allowfullscreen loading="lazy"></iframe>
+        <div class="video-ph">
+          <span class="tv">▶</span>
+          <p class="vp-title">YouTube-Video</p>
+          <button type="button" class="video-ph-btn">Video laden</button>
+          <span class="vp-note">Externes Video von YouTube. Beim Laden werden Daten an Google übertragen.</span>
+        </div>
+      </div>
+      <div class="video reveal">
+        <iframe data-src="https://www.youtube-nocookie.com/embed/dGFavuUpigo"
+          title="Werbespot — Voice Over Fella"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; encrypted-media; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+        <div class="video-ph">
+          <span class="tv">▶</span>
+          <p class="vp-title">YouTube-Video</p>
+          <button type="button" class="video-ph-btn">Video laden</button>
+          <span class="vp-note">Externes Video von YouTube. Beim Laden werden Daten an Google übertragen.</span>
+        </div>
+      </div>
     </div>
     <div class="yt-cta reveal">
       <a class="btn dark" href="https://www.youtube.com/channel/UCf8MP5ZSCVmKzNi9midyKPg" target="_blank" rel="noopener">▶&nbsp; Mehr auf YouTube</a>
@@ -669,7 +709,9 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
       <ul>
-        <li><a href="https://www.voiceoverfella.de/impressum">Impressum</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="#" class="consent-reopen">Datenschutz-Einstellungen</a></li>
       </ul>
     </div>
     <div class="foot-bottom">
@@ -678,6 +720,39 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
     </div>
   </div>
 </footer>
+
+<!-- ================= CONSENT-BANNER ================= -->
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Datenschutz-Einstellungen">
+  <div class="consent-inner">
+    <p class="consent-text"><strong>Externe Inhalte &amp; Datenschutz.</strong> Diese Website bettet Videos von YouTube (Google Ireland Ltd.) ein. Beim Laden können Daten – u.&nbsp;a. Ihre IP-Adresse – an Google in die USA übermittelt werden. Möchten Sie externe YouTube-Inhalte laden? Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="consent-actions">
+      <button type="button" class="consent-btn decline" id="consent-decline">Ablehnen</button>
+      <button type="button" class="consent-btn accept" id="consent-accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='vof-consent-youtube';
+  var banner=document.getElementById('consent');
+  function loadVideos(){
+    document.querySelectorAll('iframe[data-src]').forEach(function(f){ if(!f.src){ f.src=f.getAttribute('data-src'); } });
+    document.querySelectorAll('.video-ph').forEach(function(p){ p.style.display='none'; });
+  }
+  function show(){ if(banner) banner.classList.add('show'); }
+  function hide(){ if(banner) banner.classList.remove('show'); }
+  function accept(){ try{localStorage.setItem(KEY,'accepted');}catch(e){} loadVideos(); hide(); }
+  function decline(){ try{localStorage.setItem(KEY,'declined');}catch(e){} hide(); }
+  var choice=null; try{choice=localStorage.getItem(KEY);}catch(e){}
+  if(choice==='accepted'){ loadVideos(); }
+  else if(choice===null && document.querySelector('iframe[data-src]')){ show(); }
+  var a=document.getElementById('consent-accept'); if(a) a.addEventListener('click',accept);
+  var d=document.getElementById('consent-decline'); if(d) d.addEventListener('click',decline);
+  document.querySelectorAll('.consent-reopen').forEach(function(el){ el.addEventListener('click',function(e){ e.preventDefault(); show(); }); });
+  document.querySelectorAll('.video-ph-btn').forEach(function(b){ b.addEventListener('click',accept); });
+})();
+</script>
 
 <script>
 /* ---------- Reveal ---------- */

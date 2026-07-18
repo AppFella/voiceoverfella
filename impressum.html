@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum — Voice Over Fella | Dominik Jungheim</title>
+<meta name="description" content="Impressum von Voice Over Fella – Dominik Jungheim, Sprecher aus Grevenbroich. Angaben gemäß § 5 DDG.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.voiceoverfella.de/impressum.html">
+<!-- Schriften lokal gehostet (kein externer Google-Fonts-Aufruf) -->
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4ECDD;
+  --paper-soft:#EFE4CF;
+  --ink:#18121E;
+  --ink-soft:#241B2E;
+  --red:#FF3D2E;
+  --red-deep:#D92A1C;
+  --amber:#FFB52E;
+  --line:rgba(24,18,30,.16);
+  --line-light:rgba(244,236,221,.18);
+  --display:"Bricolage Grotesque", sans-serif;
+  --body:"Archivo", sans-serif;
+  --mono:"Space Mono", monospace;
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+::selection{background:var(--red);color:var(--paper)}
+a{color:inherit}
+h1,h2{font-family:var(--display);line-height:1;letter-spacing:-.02em}
+.wrap{width:min(880px,92vw);margin:0 auto}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+
+/* ============ NAV ============ */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(244,236,221,.9);backdrop-filter:blur(14px);
+  border-bottom:2px solid var(--ink);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;width:min(1240px,92vw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.onair{
+  display:flex;align-items:center;gap:.45rem;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;
+  border:2px solid var(--ink);border-radius:999px;padding:.32rem .7rem;
+  background:var(--paper);
+}
+.onair .dot{width:9px;height:9px;border-radius:50%;background:rgba(24,18,30,.25)}
+.brand-name{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em}
+.brand-name span{color:var(--red)}
+.back{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-weight:600;font-size:.92rem;text-decoration:none;
+}
+.back:hover{color:var(--red-deep)}
+
+/* ============ CONTENT ============ */
+.page{padding:4.5rem 0 5rem}
+.eyebrow{color:var(--red);margin-bottom:1rem}
+h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:800;margin-bottom:.4rem}
+.lead{font-size:1.05rem;color:var(--ink-soft);margin-bottom:3rem;max-width:56ch}
+.card{
+  background:var(--paper-soft);
+  border:2px solid var(--ink);
+  border-radius:var(--radius);
+  box-shadow:5px 5px 0 var(--ink);
+  padding:2rem clamp(1.3rem,4vw,2.6rem);
+  margin-bottom:1.8rem;
+}
+h2{font-size:1.35rem;font-weight:700;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:2px solid var(--line)}
+.card p{margin-bottom:.55rem}
+.card p:last-child{margin-bottom:0}
+address{font-style:normal}
+.label{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red-deep);display:block;margin-top:1.1rem;margin-bottom:.15rem}
+.label:first-child{margin-top:0}
+strong{font-weight:700}
+.card a{color:var(--red-deep);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+.card a:hover{color:var(--ink)}
+.muted{color:var(--ink-soft);font-size:.92rem}
+.small-section h2{font-size:1.05rem}
+.small-section p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ============ CONSENT-BANNER ============ */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:2000;transform:translateY(115%);transition:transform .4s cubic-bezier(.2,.7,.2,1);background:var(--paper);border-top:2px solid var(--ink)}
+.consent.show{transform:none}
+.consent-inner{width:min(1240px,92vw);margin:0 auto;padding:1.1rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.4rem;justify-content:space-between}
+.consent-text{flex:1 1 380px;font-size:.9rem;line-height:1.55}
+.consent-text strong{font-family:var(--display)}
+.consent-text a{color:var(--red-deep);text-decoration:underline;text-underline-offset:2px}
+.consent-actions{display:flex;gap:.7rem;flex-wrap:wrap}
+.consent-btn{font-family:var(--display);font-weight:800;font-size:.92rem;padding:.6rem 1.35rem;border-radius:999px;border:2px solid var(--ink);cursor:pointer;background:var(--paper);color:var(--ink);transition:.2s}
+.consent-btn.accept{background:var(--red);color:var(--paper)}
+.consent-btn.accept:hover{background:var(--red-deep)}
+.consent-btn.decline:hover{background:var(--paper-soft)}
+@media(max-width:560px){.consent-actions{width:100%}.consent-btn{flex:1}}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink);color:var(--paper);padding:3rem 0 2.5rem}
+.foot-inner{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.foot-inner a{color:var(--paper);text-decoration:none;opacity:.85}
+.foot-inner a:hover{opacity:1;color:var(--amber)}
+.foot-links{display:flex;gap:1.4rem;flex-wrap:wrap}
+.foot-bottom{margin-top:1.6rem;font-size:.82rem;opacity:.7}
+
+@media (max-width:560px){
+  .nav-links,.brand-name{font-size:.95rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="onair"><span class="dot"></span>ON AIR</span>
+      <span class="brand-name">VOICE OVER <span>FELLA</span></span>
+    </a>
+    <a class="back" href="index.html">← Zurück zur Startseite</a>
+  </div>
+</nav>
+
+<!-- ================= CONTENT ================= -->
+<main class="page">
+  <div class="wrap">
+    <p class="mono eyebrow">Rechtliches</p>
+    <h1>Impressum</h1>
+    <p class="lead">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) und § 18 Medienstaatsvertrag (MStV).</p>
+
+    <section class="card">
+      <h2>Diensteanbieter</h2>
+      <address>
+        <p><strong>Dominik Jungheim</strong></p>
+        <p>Voice Over Fella (Einzelunternehmen)</p>
+        <p>Sportstraße 8</p>
+        <p>41516 Grevenbroich</p>
+        <p>Deutschland</p>
+      </address>
+    </section>
+
+    <section class="card">
+      <h2>Kontakt</h2>
+      <span class="label">Telefon</span>
+      <p><a href="tel:+491713473248">+49 171 3473248</a></p>
+      <span class="label">E-Mail</span>
+      <p><a href="mailto:contact@voiceoverfella.com">contact@voiceoverfella.com</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Umsatzsteuer-Identifikationsnummer</h2>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+      <p><strong>DE270664735</strong></p>
+    </section>
+
+    <section class="card">
+      <h2>Redaktionell verantwortlich</h2>
+      <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
+      <address>
+        <p><strong>Dominik Jungheim</strong></p>
+        <p>Sportstraße 8, 41516 Grevenbroich</p>
+      </address>
+    </section>
+
+    <section class="card">
+      <h2>Kammerzugehörigkeit</h2>
+      <p>Industrie- und Handelskammer (IHK) Mittlerer Niederrhein, Krefeld · Mönchengladbach · Rhein-Kreis Neuss.</p>
+    </section>
+
+    <section class="card small-section">
+      <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+      <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 Verbraucherstreitbeilegungsgesetz – VSBG).</p>
+    </section>
+
+    <section class="card small-section">
+      <h2>Haftung für Inhalte</h2>
+      <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+    </section>
+
+    <section class="card small-section">
+      <h2>Haftung für Links</h2>
+      <p>Unser Angebot enthält gegebenenfalls Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+    </section>
+
+    <section class="card small-section">
+      <h2>Urheberrecht</h2>
+      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten – insbesondere Texte, Sprachaufnahmen, Audio-Demos, Grafiken und Videos – unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+    </section>
+
+    <p class="muted">Stand: Juli 2026</p>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-links">
+      <a href="index.html">Startseite</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="#" class="consent-reopen">Datenschutz-Einstellungen</a>
+    </div>
+    <div class="foot-bottom" style="margin:0">© 2026 Dominik Jungheim · Voice Over Fella</div>
+  </div>
+</footer>
+
+<!-- ================= CONSENT-BANNER ================= -->
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Datenschutz-Einstellungen">
+  <div class="consent-inner">
+    <p class="consent-text"><strong>Externe Inhalte &amp; Datenschutz.</strong> Diese Website bettet Videos von YouTube (Google Ireland Ltd.) ein. Beim Laden können Daten – u.&nbsp;a. Ihre IP-Adresse – an Google in die USA übermittelt werden. Möchten Sie externe YouTube-Inhalte laden? Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="consent-actions">
+      <button type="button" class="consent-btn decline" id="consent-decline">Ablehnen</button>
+      <button type="button" class="consent-btn accept" id="consent-accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='vof-consent-youtube';
+  var banner=document.getElementById('consent');
+  function loadVideos(){
+    document.querySelectorAll('iframe[data-src]').forEach(function(f){ if(!f.src){ f.src=f.getAttribute('data-src'); } });
+    document.querySelectorAll('.video-ph').forEach(function(p){ p.style.display='none'; });
+  }
+  function show(){ if(banner) banner.classList.add('show'); }
+  function hide(){ if(banner) banner.classList.remove('show'); }
+  function accept(){ try{localStorage.setItem(KEY,'accepted');}catch(e){} loadVideos(); hide(); }
+  function decline(){ try{localStorage.setItem(KEY,'declined');}catch(e){} hide(); }
+  var choice=null; try{choice=localStorage.getItem(KEY);}catch(e){}
+  if(choice==='accepted'){ loadVideos(); }
+  else if(choice===null && document.querySelector('iframe[data-src]')){ show(); }
+  var a=document.getElementById('consent-accept'); if(a) a.addEventListener('click',accept);
+  var d=document.getElementById('consent-decline'); if(d) d.addEventListener('click',decline);
+  document.querySelectorAll('.consent-reopen').forEach(function(el){ el.addEventListener('click',function(e){ e.preventDefault(); show(); }); });
+  document.querySelectorAll('.video-ph-btn').forEach(function(b){ b.addEventListener('click',accept); });
+})();
+</script>
+
+</body>
+</html>
