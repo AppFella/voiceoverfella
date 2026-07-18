@@ -1,5 +1,5 @@
 # Domain-Kanonisierung: alles auf https://www.voiceoverfella.de bündeln (SEO)
 # Greift, sobald die jeweilige Domain als Alias am selben Netlify-Projekt hängt.
-https://voiceoverfella.de/*        https://www.voiceoverfella.de/:splat  301!
-https://voiceoverfella.com/*       https://www.voiceoverfella.de/:splat  301!
-https://www.voiceoverfella.com/*   https://www.voiceoverfella.de/:splat  301!
+# https://voiceoverfella.de/*        https://www.voiceoverfella.de/:splat  301!
+# https://voiceoverfella.com/*       https://www.voiceoverfella.de/:splat  301!
+# https://www.voiceoverfella.com/*   https://www.voiceoverfella.de/:splat  301!
