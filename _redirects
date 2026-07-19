@@ -1,5 +1,5 @@
-# Domain-Kanonisierung: alles auf https://www.voiceoverfella.de bündeln (SEO)
-# Greift, sobald die jeweilige Domain als Alias am selben Netlify-Projekt hängt.
-# https://voiceoverfella.de/*        https://www.voiceoverfella.de/:splat  301!
-# https://voiceoverfella.com/*       https://www.voiceoverfella.de/:splat  301!
-# https://www.voiceoverfella.com/*   https://www.voiceoverfella.de/:splat  301!
+# Domain-Kanonisierung: alles auf https://voiceoverfella.de bündeln (SEO)
+# www -> apex wird von Netlify automatisch erledigt (Primary Domain = voiceoverfella.de).
+# .com auf die .de-Hauptdomain umleiten (setzt voraus, dass .com als Alias am selben Netlify-Projekt hängt).
+https://www.voiceoverfella.com/*   https://voiceoverfella.de/:splat  301!
+https://voiceoverfella.com/*       https://voiceoverfella.de/:splat  301!
