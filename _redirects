@@ -3,3 +3,8 @@
 # .com auf die .de-Hauptdomain umleiten (setzt voraus, dass .com als Alias am selben Netlify-Projekt hängt).
 https://www.voiceoverfella.com/*   https://voiceoverfella.de/:splat  301!
 https://voiceoverfella.com/*       https://voiceoverfella.de/:splat  301!
+
+# Alte Wix-URLs sauber auffangen (statt 404) — Rest läuft dank Netlify Pretty-URLs von selbst.
+/online-buchen         /#kontakt        301
+/online-buchen/        /#kontakt        301
+/kopie-von-impressum   /impressum.html  301

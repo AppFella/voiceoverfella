@@ -34,7 +34,9 @@
 <!-- Schriften lokal gehostet (kein externer Google-Fonts-Aufruf) -->
 <link rel="preload" href="fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/k3kPo8UDI-1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/vt323-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link href="fonts/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="kalkulator.css">
 
 <!-- Strukturierte Daten für Google (Person, Unternehmen, Website) -->
 <script type="application/ld+json">
@@ -99,6 +101,47 @@
       "name": "Voice Over Fella",
       "inLanguage": "de",
       "publisher": { "@id": "https://voiceoverfella.de/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://voiceoverfella.de/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet ein professioneller Sprecher?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Projekt ab: Textumfang, Einsatzzweck und Nutzungsrechte (z. B. Online, Radio oder TV) bestimmen den Preis. Deshalb gibt es keine Preisliste von der Stange, sondern ein faires Festpreis-Angebot für dein konkretes Projekt — innerhalb weniger Stunden nach deinem Briefing. So weißt du vorher genau, was es kostet." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell bekomme ich meine Aufnahme?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sendefertige Files liefere ich innerhalb von 24 Stunden nach der Aufnahme — sauber geschnitten, im Wunschformat. Wenn es besonders eilig ist, sag einfach Bescheid." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich bei der Aufnahme live dabei sein?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Klar! Live-Regie ist per Source-Stream, Zoom oder Telefon möglich. Du hörst in Echtzeit zu, gibst Feedback und wir feilen gemeinsam an der Aufnahme, bis alles sitzt — ganz so, als wärst du mit im Studio." }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es eine kostenlose Hörprobe vor der Buchung?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Auf Wunsch bekommst du zusammen mit dem Angebot eine kostenlose Hörprobe deines eigenen Textes — so hörst du vorab, wie deine Produktion klingen wird. Erste Eindrücke gibt es außerdem sofort in den Demos." }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind Korrekturen im Preis enthalten?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Korrekturschleifen sind immer inklusive. Es ist erst erledigt, wenn du zufrieden bist — das ist keine Floskel, sondern Arbeitsprinzip." }
+        },
+        {
+          "@type": "Question",
+          "name": "Für welche Formate kann ich dich buchen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Werbung (Radio, TV, Online), Synchron, Trailer & Imagefilm, Station-Voice & Rundfunk, E-Learning & Erklärfilm sowie Videospiel-Charaktere. Gesprochen wird auf Deutsch, Englisch (US-Accent) — oder auf Platt." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie läuft eine Remote-Sprachaufnahme ab?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Du schickst mir Skript, Stilrichtung und Referenzen — oder einfach eine grobe Idee. Nach dem Festpreis-Angebot nehme ich in meiner eigenen Studio-Booth auf (48 kHz/24 bit), auf Wunsch mit Live-Regie. Danach bekommst du sendefertige Files ins Postfach. Remote funktioniert das weltweit — egal ob du in Düsseldorf oder Los Angeles sitzt." }
+        }
+      ]
     }
   ]
 }
@@ -123,9 +166,15 @@
   --amber:#FFB52E;
   --line:rgba(24,18,30,.16);
   --line-light:rgba(244,236,221,.18);
+  --off:#FFFDF7;
+  --face:#1b1422; --face-hi:#2a2033; --face-lo:#120d18;
+  --hair-d:rgba(24,18,30,.16); --hair-l:rgba(244,236,221,.10);
+  --ease:cubic-bezier(.4,.02,.2,1); --spring:cubic-bezier(.34,1.4,.5,1);
   --display:"Bricolage Grotesque", sans-serif;
   --body:"Archivo", sans-serif;
   --mono:"Space Mono", monospace;
+  --digi:"VT323",monospace;
+  --hand:"Caveat",cursive;
   --radius:22px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -190,6 +239,15 @@ body.is-playing .onair{border-color:var(--red);color:var(--red)}
 .btn.dark{background:var(--ink);color:var(--paper);border-color:var(--paper);box-shadow:4px 4px 0 var(--red)}
 .btn.dark:hover{box-shadow:7px 7px 0 var(--red)}
 @media(max-width:860px){.nav-links li:not(.keep){display:none}}
+/* Mobile: ON AIR / Marke / Button jeweils einzeilig in einer Reihe halten */
+@media(max-width:560px){
+  .nav-inner{gap:.5rem}
+  .brand{gap:.45rem}
+  .onair,.brand-name,.nav-links .btn{white-space:nowrap}
+  .onair{font-size:.56rem;padding:.26rem .5rem;gap:.35rem}
+  .brand-name{font-size:.8rem}
+  .nav-links .btn{font-size:.8rem;padding:.5rem .9rem;box-shadow:3px 3px 0 var(--ink)}
+}
 
 /* ============ HERO ============ */
 header{
@@ -438,6 +496,8 @@ body:not(.is-playing) .eq i{animation-duration:2.8s}
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item .faq-a{padding:0 1.4rem 1.35rem;color:var(--ink-soft);max-width:68ch}
 .faq-item .faq-a a{color:var(--red-deep)}
+.faq-wrap{overflow:hidden;transition:height .34s cubic-bezier(.4,0,.2,1)}
+.faq-item summary::after{transition:transform .34s cubic-bezier(.4,0,.2,1)}
 
 /* ============ FOOTER ============ */
 footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
@@ -452,6 +512,14 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
 .foot-grid a{text-decoration:none;font-size:.92rem;opacity:.85}
 .foot-grid a:hover{opacity:1;color:var(--amber)}
 .foot-bottom{margin-top:2.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;opacity:.6}
+
+/* ============ KALKULATOR ============ */
+.kalkulator-sec{padding:4.5rem 0 3.5rem;background:var(--paper)}
+.kalkulator-sec .wrap{margin-bottom:2.4rem}
+.kalkulator-sec .sec-head{display:flex;flex-direction:column;gap:.6rem}
+.kalkulator-sec .sec-sub{max-width:52ch;color:var(--ink-soft);line-height:1.55;margin-top:.4rem}
+.rig{width:min(920px,96vw);margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.kalkulator-hint{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--ink-soft);opacity:.55;margin-top:1rem;text-transform:uppercase;text-align:center}
 </style>
 </head>
 <body>
@@ -466,6 +534,7 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
     <ul class="nav-links">
       <li><a href="#demos">Demos</a></li>
       <li><a href="#kunden">Kunden</a></li>
+      <li><a href="#kalkulator">Preise</a></li>
       <li><a href="#ablauf">Ablauf</a></li>
       <li><a href="#ueber">Über mich</a></li>
       <li class="keep"><a class="btn" href="#kontakt">Stimme buchen</a></li>
@@ -649,6 +718,33 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
   <div class="wrap">
     <p class="hint"></p>
   </div>
+</section>
+
+<!-- ================= KALKULATOR ================= -->
+<section class="kalkulator-sec" id="kalkulator">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono kicker" style="color:var(--red)">Preisrechner</span>
+      <h2>Dein Preis. <span class="accent">Sofort.</span></h2>
+      <p class="sec-sub">Kein Hin-und-Her per Mail. Stell dein Projekt zusammen — Genre, Länge, Nutzung — und sieh den Preis auf einen Blick. Danach einfach Angebot anfragen oder direkt per WhatsApp melden.</p>
+    </div>
+  </div>
+  <div class="rig">
+    <div id="genreRack"></div>
+    <div id="stack" style="display:flex;flex-direction:column;gap:14px"></div>
+    <div id="calcRack" style="margin-top:14px"></div>
+  </div>
+  <p class="kalkulator-hint">Klicken oder ziehen · Regler &amp; Schalter sind live bedienbar</p>
+  <!-- Netlify Forms: statische Kopie für Bot-Detection -->
+  <form name="angebot" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+    <input type="hidden" name="form-name" value="angebot">
+    <input name="bot-field">
+    <input name="vorname"><input name="name"><input name="firma">
+    <input name="plz"><input name="strasse">
+    <textarea name="skript"></textarea>
+    <input type="file" name="datei">
+    <input name="demo"><input name="konfiguration"><input name="preis">
+  </form>
 </section>
 
 <!-- ================= ABLAUF ================= -->
@@ -1019,5 +1115,45 @@ document.querySelectorAll('.demo').forEach(card => {
   });
 });
 </script>
+
+<script>
+/* FAQ: sanftes Auf-/Zuklappen mit Höhen-Animation (behält <details>-Semantik) */
+(function(){
+  document.querySelectorAll('.faq-item').forEach(function(d){
+    var sum = d.querySelector('summary');
+    var ans = d.querySelector('.faq-a');
+    if(!sum || !ans) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'faq-wrap';
+    ans.parentNode.insertBefore(wrap, ans);
+    wrap.appendChild(ans);
+
+    sum.addEventListener('click', function(e){
+      e.preventDefault();
+      if(d.dataset.anim) return;
+      d.dataset.anim = '1';
+      if(d.open){
+        wrap.style.height = wrap.scrollHeight + 'px';
+        requestAnimationFrame(function(){ wrap.style.height = '0px'; });
+        wrap.addEventListener('transitionend', function te(ev){
+          if(ev.propertyName !== 'height') return;
+          wrap.removeEventListener('transitionend', te);
+          d.open = false; wrap.style.height = ''; delete d.dataset.anim;
+        });
+      } else {
+        d.open = true;
+        wrap.style.height = '0px';
+        requestAnimationFrame(function(){ wrap.style.height = wrap.scrollHeight + 'px'; });
+        wrap.addEventListener('transitionend', function te(ev){
+          if(ev.propertyName !== 'height') return;
+          wrap.removeEventListener('transitionend', te);
+          wrap.style.height = 'auto'; delete d.dataset.anim;
+        });
+      }
+    });
+  });
+})();
+</script>
+<script src="kalkulator.js"></script>
 </body>
 </html>

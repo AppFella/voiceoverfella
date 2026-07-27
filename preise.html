@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Over Preis berechnen — Sofort kalkulieren | Voice Over Fella</title>
+<meta name="description" content="Berechne deinen Voice Over Preis sofort — kostenloser Kalkulator ohne Anmeldung. Professioneller Sprecher, faire Festpreise, unverbindliches Angebot in 8 Stunden. Kein langes Hin-und-Her.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voiceoverfella.de/preise">
+<meta name="theme-color" content="#18121E">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Voice Over Fella">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://voiceoverfella.de/preise">
+<meta property="og:title" content="Voice Over Preis sofort berechnen — Kein Angebots-Ping-Pong | Voice Over Fella">
+<meta property="og:description" content="Preis in Sekunden berechnen. Professioneller Sprecher ab 100 €, Festpreise, Antwort in 8 Stunden. Jetzt kalkulieren und unverbindlich anfragen.">
+<meta property="og:image" content="https://voiceoverfella.de/bilder/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dominik Jungheim, der Voice Over Fella, im Studio">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voice Over Preis sofort berechnen | Voice Over Fella">
+<meta name="twitter:description" content="Kein Angebots-Ping-Pong. Preis berechnen, Angebot anfragen, in 24 Stunden fertig — fairer Festpreis.">
+<meta name="twitter:image" content="https://voiceoverfella.de/bilder/og-image.jpg">
+
+<!-- Schriften lokal (kein Google Fonts) -->
+<link rel="preload" href="fonts/vt323-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/k3kPo8UDI-1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn.woff2" as="font" type="font/woff2" crossorigin>
+<link href="fonts/fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="kalkulator.css">
+
+<!-- Strukturierte Daten -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://voiceoverfella.de/preise#webpage",
+      "url": "https://voiceoverfella.de/preise",
+      "name": "Voice Over Preis berechnen — Sofort kalkulieren",
+      "description": "Interaktiver Preisrechner für professionelle Voice-Over-Aufnahmen. Preis in Sekunden berechnen, unverbindliches Angebot anfragen.",
+      "inLanguage": "de",
+      "isPartOf": { "@id": "https://voiceoverfella.de/#website" },
+      "about": { "@id": "https://voiceoverfella.de/#business" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://voiceoverfella.de/#business",
+      "name": "Voice Over Fella",
+      "url": "https://voiceoverfella.de/",
+      "telephone": "+49 171 3473248",
+      "email": "contact@voiceoverfella.com",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sportstraße 8",
+        "postalCode": "41516",
+        "addressLocality": "Grevenbroich",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Worldwide",
+      "knowsLanguage": ["de", "en"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Voice Over Leistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Voice Over Allgemein",
+            "description": "Werbung, Erklärfilm, Social Media, E-Learning — Festpreis je nach Nutzungsrechten und Länge.",
+            "priceCurrency": "EUR",
+            "price": "100",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": "100",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Hörbuch Einlesung",
+            "description": "Professionelle Hörbuch-Einlesung, gemastered oder ungemastered, Preis je Stunde.",
+            "priceCurrency": "EUR",
+            "price": "350",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "unitText": "Stunde",
+              "minPrice": "350",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Games / Charakterstimmen",
+            "description": "Videospiel-Charaktere und Synchron, Preis per Take.",
+            "priceCurrency": "EUR",
+            "price": "100"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://voiceoverfella.de/preise#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet ein professioneller Sprecher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Preis hängt von Genre, Länge und Nutzungsrechten ab. Privat-Projekte starten ab 100 €, Werbung und kommerzielle Nutzung ab 350 €. Nutze den Kalkulator für deinen genauen Preis — in Sekunden, ohne Anmeldung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell bekomme ich ein Angebot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Innerhalb von 8 Stunden — garantiert. Du füllst das Formular aus, ich melde mich mit einem konkreten Angebot. Kein wochenlanges Hin-und-Her."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wann sind die Aufnahmen fertig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sendefertige Files innerhalb von 24 Stunden nach Auftragserteilung — sauber geschnitten im Wunschformat. Bei Eilprojekten auch schneller, einfach fragen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es einen Festpreis oder versteckte Kosten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nur Festpreise. Was der Kalkulator anzeigt, ist das was du bezahlst — inkl. Korrekturschleifen. Keine Studiogebühren, keine Überraschungsrechnungen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich eine kostenlose Hörprobe bekommen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Du kannst im Anfrageformular eine kostenlose Demo deines Textes anfragen — gesprochen und geliefert innerhalb von 24 Stunden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie funktioniert die Buchung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Preis berechnen → Angebot anfragen → Angebot erhalten (max. 8 Stunden) → bestätigen → Aufnahme → fertige Files (max. 24 Stunden). Oder einfach kurz per WhatsApp melden."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --paper:#F4ECDD; --paper-soft:#EFE4CF;
+  --ink:#18121E; --ink-soft:#241B2E;
+  --red:#FF3D2E; --red-deep:#D92A1C; --amber:#FFB52E;
+  --off:#FFFDF7;
+  --face:#1b1422; --face-hi:#2a2033; --face-lo:#120d18;
+  --hair-d:rgba(24,18,30,.16); --hair-l:rgba(244,236,221,.10);
+  --line:rgba(24,18,30,.16); --line-light:rgba(244,236,221,.18);
+  --ease:cubic-bezier(.4,.02,.2,1); --spring:cubic-bezier(.34,1.4,.5,1);
+  --display:"Bricolage Grotesque",sans-serif;
+  --body:"Archivo",sans-serif;
+  --mono:"Space Mono",monospace;
+  --digi:"VT323",monospace;
+  --hand:"Caveat",cursive;
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--red);color:var(--paper)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:.95;letter-spacing:-.02em}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:.001s!important;transition-duration:.001s!important}
+}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(244,236,221,.88);backdrop-filter:blur(14px);border-bottom:2px solid var(--ink)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.onair-tag{display:flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;border:2px solid var(--ink);border-radius:999px;padding:.32rem .7rem;background:var(--paper)}
+.onair-dot{width:9px;height:9px;border-radius:50%;background:rgba(24,18,30,.25)}
+.brand-name{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em}
+.brand-name span{color:var(--red)}
+.nav-links{display:flex;gap:1.6rem;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;font-weight:600;font-size:.92rem;position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--red);transition:.25s}
+.nav-links a:not(.btn):hover::after,.nav-links a.active::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--display);font-weight:800;font-size:.9rem;letter-spacing:.01em;background:var(--ink);color:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:.52rem 1.25rem;text-decoration:none;transition:.15s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--paper)}
+.btn.red:hover{background:var(--red-deep);border-color:var(--red-deep)}
+@media(max-width:700px){.nav-links li:not(.keep){display:none}}
+
+/* HERO */
+.hero-p{padding:7.5rem 0 4rem;text-align:center}
+.hero-p .kicker{display:block;margin-bottom:1rem;color:var(--red)}
+.hero-p h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1.2rem}
+.hero-p h1 em{font-style:normal;color:var(--red)}
+.hero-p .lead{font-size:clamp(1rem,2vw,1.22rem);color:var(--ink-soft);max-width:56ch;margin:0 auto 2rem;line-height:1.6}
+.hero-ctas{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.hero-ctas .btn{font-size:1rem;padding:.65rem 1.6rem}
+.usp-strip{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-top:3rem;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.usp-item{display:flex;align-items:center;gap:.6rem;padding:.85rem 1.6rem;border-right:2px solid var(--ink);font-size:.88rem;font-weight:600}
+.usp-item:last-child{border-right:0}
+.usp-item .usp-icon{font-size:1.1rem;flex-none}
+@media(max-width:600px){.usp-strip{flex-direction:column}.usp-item{border-right:0;border-bottom:2px solid var(--ink)}.usp-item:last-child{border-bottom:0}}
+
+/* PROZESS SCHNELL */
+.schnell{padding:4rem 0}
+.schnell .sec-head{margin-bottom:2.8rem;text-align:center}
+.schnell .kicker{display:block;margin-bottom:.8rem}
+.schnell h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800}
+.steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0}
+.step-q{padding:1.8rem;border:2px solid var(--ink);position:relative}
+.step-q+.step-q{border-left:0}
+.step-q .sn{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--red);display:block;margin-bottom:.6rem}
+.step-q h3{font-family:var(--display);font-weight:800;font-size:1.25rem;margin-bottom:.5rem}
+.step-q p{font-size:.9rem;color:var(--ink-soft);line-height:1.55}
+.step-q .arrow{position:absolute;right:-18px;top:50%;transform:translateY(-50%);width:34px;height:34px;background:var(--ink);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;z-index:2;border:2px solid var(--ink)}
+@media(max-width:700px){
+  .steps-row{grid-template-columns:1fr}
+  .step-q+.step-q{border-left:2px solid var(--ink);border-top:0}
+  .step-q .arrow{right:auto;left:50%;top:auto;bottom:-18px;transform:translateX(-50%) rotate(90deg)}
+}
+
+/* KALKULATOR */
+.kalkulator-p{padding:4.5rem 0 3.5rem}
+.kalkulator-p .sec-head{text-align:center;margin-bottom:2.4rem}
+.kalkulator-p .kicker{display:block;margin-bottom:.8rem}
+.kalkulator-p h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:.8rem}
+.kalkulator-p .sec-sub{color:var(--ink-soft);max-width:52ch;margin:0 auto;line-height:1.55}
+.rig{width:min(920px,96vw);margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.kalkulator-hint{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--ink-soft);opacity:.55;margin-top:1.2rem;text-transform:uppercase;text-align:center}
+
+/* VORTEILE */
+.vorteile{padding:4.5rem 0;background:var(--ink);color:var(--paper)}
+.vorteile .sec-head{margin-bottom:2.8rem}
+.vorteile .kicker{display:block;margin-bottom:.8rem;color:var(--amber)}
+.vorteile h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--paper);margin-bottom:.4rem}
+.vorteile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.vorteil{background:rgba(244,236,221,.06);border:1px solid rgba(244,236,221,.12);border-radius:var(--radius);padding:1.6rem}
+.vorteil-icon{font-size:1.8rem;margin-bottom:.8rem}
+.vorteil h3{font-family:var(--display);font-weight:800;font-size:1.1rem;color:var(--off);margin-bottom:.4rem}
+.vorteil p{font-size:.9rem;color:rgba(244,236,221,.7);line-height:1.6}
+
+/* FAQ */
+.faq-p{padding:4.5rem 0}
+.faq-p .sec-head{margin-bottom:2.4rem}
+.faq-p .kicker{display:block;margin-bottom:.8rem}
+.faq-p h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:.4rem}
+.faq-list{display:flex;flex-direction:column;gap:0;border-top:2px solid var(--ink)}
+.faq-entry{border-bottom:2px solid var(--ink);overflow:hidden}
+.faq-entry summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;cursor:pointer;padding:1.1rem 0;font-family:var(--display);font-weight:800;font-size:1.05rem;list-style:none;user-select:none}
+.faq-entry summary::-webkit-details-marker{display:none}
+.faq-entry summary::after{content:"+";font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--red);transition:transform .25s;flex-shrink:0}
+.faq-entry[open] summary::after{transform:rotate(45deg)}
+.faq-ans{padding:.2rem 0 1.1rem;color:var(--ink-soft);line-height:1.6;max-width:66ch}
+
+/* CTA */
+.cta-band{padding:4rem 0;background:var(--red);color:var(--paper);text-align:center}
+.cta-band h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:var(--paper);margin-bottom:.6rem}
+.cta-band p{font-size:1.05rem;opacity:.9;margin-bottom:2rem;max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.5}
+.cta-band .btn{background:var(--paper);color:var(--red);border-color:var(--paper);font-size:1rem;padding:.7rem 1.8rem}
+.cta-band .btn:hover{background:transparent;color:var(--paper)}
+.cta-band .btn.ghost{background:transparent;border-color:rgba(244,236,221,.5);color:var(--paper)}
+.cta-band .btn.ghost:hover{background:rgba(244,236,221,.12)}
+.cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:var(--ink);color:var(--paper);padding:3.5rem 0 2rem}
+.foot-mark{font-family:var(--display);font-weight:800;font-size:clamp(2rem,8vw,5.5rem);letter-spacing:-.03em;line-height:.9;color:var(--paper);opacity:.96}
+.foot-mark span{color:var(--red)}
+.foot-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line-light)}
+.foot-grid ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap}
+.foot-grid a{text-decoration:none;font-size:.9rem;opacity:.8}
+.foot-grid a:hover{opacity:1;color:var(--amber)}
+.foot-bottom{margin-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;opacity:.55}
+
+/* CONSENT */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:2000;transform:translateY(115%);transition:transform .4s cubic-bezier(.2,.7,.2,1);background:var(--paper);border-top:2px solid var(--ink)}
+.consent.show{transform:none}
+.consent-inner{width:min(900px,92vw);margin:0 auto;display:flex;align-items:center;gap:1.4rem;padding:1.1rem 0;flex-wrap:wrap}
+.consent-text{flex:1;font-size:.88rem;line-height:1.5;min-width:200px}
+.consent-text a{color:var(--red)}
+.consent-btns{display:flex;gap:.6rem;flex-wrap:wrap}
+.consent-btn{font-family:var(--display);font-weight:800;font-size:.88rem;border-radius:999px;padding:.45rem 1.1rem;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink);transition:.15s}
+.consent-btn:hover{background:rgba(24,18,30,.07)}
+.consent-btn.accept{background:var(--ink);color:var(--paper)}
+.consent-btn.accept:hover{background:var(--red);border-color:var(--red)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <span class="onair-tag"><span class="onair-dot"></span>ON AIR</span>
+      <span class="brand-name">VOICE OVER <span>FELLA</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#demos">Demos</a></li>
+      <li><a href="/#kunden">Kunden</a></li>
+      <li><a href="#kalkulator" class="active">Preise</a></li>
+      <li><a href="/#ueber">Über mich</a></li>
+      <li class="keep"><a class="btn" href="/#kontakt">Stimme buchen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-p" id="top">
+  <div class="wrap">
+    <span class="mono kicker reveal">Preisrechner · Sofortangebot · Kein Hin-und-Her</span>
+    <h1 class="reveal">Voice Over Preis.<br><em>Jetzt sofort berechnen.</em></h1>
+    <p class="lead reveal">Kein langer E-Mail-Ping-Pong, kein Warten auf Angebote. Konfiguriere dein Projekt in Sekunden — und sieh deinen fairen Festpreis auf einen Blick. Professionelle Qualität, transparente Preise, Lieferung in 24 Stunden.</p>
+    <div class="hero-ctas reveal">
+      <a class="btn red" href="#kalkulator">Preis berechnen</a>
+      <a class="btn ghost" href="https://wa.me/491713473248?text=Hallo%20Dominik%2C%20ich%20m%C3%B6chte%20ein%20Voice-Over%20buchen." target="_blank" rel="noopener">WhatsApp-Anfrage</a>
+    </div>
+    <div class="usp-strip reveal">
+      <div class="usp-item"><span class="usp-icon">⚡</span>Angebot in 8 Stunden</div>
+      <div class="usp-item"><span class="usp-icon">✓</span>Fertige Files in 24 Stunden</div>
+      <div class="usp-item"><span class="usp-icon">€</span>Nur Festpreise — keine Überraschungen</div>
+      <div class="usp-item"><span class="usp-icon">🎙</span>15+ Jahre Erfahrung, 1.200+ Buchungen</div>
+    </div>
+  </div>
+</header>
+
+<!-- SO SCHNELL GEHT'S -->
+<section class="schnell" id="ablauf">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono kicker" style="color:var(--red)">Vom Klick zum fertigen Audio</span>
+      <h2>Sprecher buchen war noch nie so einfach.</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step-q reveal">
+        <span class="sn">SCHRITT 01</span>
+        <h3>Preis berechnen</h3>
+        <p>Stell Genre, Länge und Nutzungsrecht ein. Der Konfigurator zeigt sofort deinen Festpreis — ohne Anmeldung, ohne Wartezeit.</p>
+        <span class="arrow" aria-hidden="true">→</span>
+      </div>
+      <div class="step-q reveal">
+        <span class="sn">SCHRITT 02</span>
+        <h3>Angebot anfragen</h3>
+        <p>Klick auf „Angebot anfragen", füll das kurze Formular aus — Skript hochladen, fertig. Innerhalb von 8 Stunden hast du meine Antwort.</p>
+        <span class="arrow" aria-hidden="true">→</span>
+      </div>
+      <div class="step-q reveal">
+        <span class="sn">SCHRITT 03</span>
+        <h3>Fertige Files in 24 h</h3>
+        <p>Ich gehe in die Booth, nehme auf, schneide und liefere sendefertige Files in deinem Format — innerhalb von 24 Stunden. Korrekturschleifen inklusive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KALKULATOR -->
+<section class="kalkulator-p" id="kalkulator">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono kicker" style="color:var(--red)">Kostenloser Preisrechner</span>
+      <h2>Dein Voice Over Preis.<br>Sofort & unverbindlich.</h2>
+      <p class="sec-sub">Wähle dein Genre, stelle Länge und Nutzungsrechte ein und klick auf Play. Der Kalkulator zeigt deinen Festpreis — inklusive Korrekturschleifen, ohne versteckte Kosten.</p>
+    </div>
+  </div>
+  <div class="rig">
+    <div id="genreRack"></div>
+    <div id="stack" style="display:flex;flex-direction:column;gap:14px"></div>
+    <div id="calcRack" style="margin-top:14px"></div>
+  </div>
+  <p class="kalkulator-hint">Klicken oder ziehen · Regler &amp; Schalter sind live bedienbar</p>
+  <!-- Netlify Forms: statische Kopie für Bot-Detection -->
+  <form name="angebot" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+    <input type="hidden" name="form-name" value="angebot">
+    <input name="bot-field">
+    <input name="vorname"><input name="name"><input name="firma">
+    <input name="plz"><input name="strasse">
+    <textarea name="skript"></textarea>
+    <input type="file" name="datei">
+    <input name="demo"><input name="konfiguration"><input name="preis">
+  </form>
+</section>
+
+<!-- VORTEILE -->
+<section class="vorteile" id="vorteile">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono kicker">Warum Voice Over Fella?</span>
+      <h2>Günstiger Sprecher<br>ohne Abstriche bei der Qualität.</h2>
+    </div>
+    <div class="vorteile-grid">
+      <div class="vorteil reveal">
+        <div class="vorteil-icon">💰</div>
+        <h3>Faire Festpreise — transparent</h3>
+        <p>Was der Kalkulator zeigt, ist was du zahlst. Kein Verhandeln, keine Studiogebühren on top, keine Folgekosten. Alles inklusive Korrekturschleifen.</p>
+      </div>
+      <div class="vorteil reveal">
+        <div class="vorteil-icon">⚡</div>
+        <h3>Angebot in 8 Stunden garantiert</h3>
+        <p>Kein wochenlanges Warten. Du sendest die Anfrage, ich schreibe zurück — mit konkretem Angebot und Terminvorschlag. Meistens deutlich schneller.</p>
+      </div>
+      <div class="vorteil reveal">
+        <div class="vorteil-icon">🎙</div>
+        <h3>Sendefertig in 24 Stunden</h3>
+        <p>Aufgenommen in meiner eigenen Studio-Booth (48 kHz / 24 bit), sauber geschnitten, im Wunschformat — und fertig. Eilprojekte auf Anfrage noch schneller.</p>
+      </div>
+      <div class="vorteil reveal">
+        <div class="vorteil-icon">🌍</div>
+        <h3>Remote buchbar — weltweit</h3>
+        <p>Du bist in Hamburg, Zürich oder Los Angeles? Kein Problem. Remote-Projekte sind mein Alltag. Live-Regie per Zoom oder Source-Connect ist jederzeit möglich.</p>
+      </div>
+      <div class="vorteil reveal">
+        <div class="vorteil-icon">🔄</div>
+        <h3>Korrekturschleifen inklusive</h3>
+        <p>Es ist erst erledigt, wenn du zufrieden bist. Korrekturen sind im Preis eingeschlossen — nicht als Extra abgerechnet. Seriös, wie's sein sollte.</p>
+      </div>
+      <div class="vorteil reveal">
+        <div class="vorteil-icon">🎁</div>
+        <h3>Kostenlose Demo deines Textes</h3>
+        <p>Unsicher ob die Stimme passt? Fordere eine kostenlose Hörprobe deines Textes an — ohne Verpflichtung, innerhalb von 24 Stunden in deinem Postfach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-p" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="mono kicker" style="color:var(--red)">Häufige Fragen zu Preisen</span>
+      <h2>Alles, was du<br>wissen willst.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-entry">
+        <summary>Was kostet ein professioneller Sprecher?</summary>
+        <p class="faq-ans">Der Preis hängt von Genre, Länge und Nutzungsrechten ab. Privat-Projekte starten ab 100 €, Werbung und kommerzielle Nutzung ab 350 €. Nutze einfach den Kalkulator oben — in Sekunden, ohne Anmeldung.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Gibt es einen Festpreis oder kommen Kosten dazu?</summary>
+        <p class="faq-ans">Nur Festpreise. Was der Kalkulator anzeigt, ist der Gesamtpreis — inkl. Korrekturschleifen, Schnitt und Lieferung. Keine versteckten Studiogebühren, keine Nachberechnungen.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Wie schnell bekomme ich ein Angebot?</summary>
+        <p class="faq-ans">Innerhalb von 8 Stunden — garantiert. Du füllst das Formular im Kalkulator aus (Skript anhängen, fertig), und ich schicke dir ein konkretes Angebot. Meistens geht es deutlich schneller.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Wann sind die fertigen Aufnahmen bei mir?</summary>
+        <p class="faq-ans">Sendefertige Files innerhalb von 24 Stunden nach Auftragserteilung — sauber geschnitten, im Wunschformat (WAV, MP3, AIFF, oder was du brauchst). Bei Eilprojekten einfach kurz Bescheid geben.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Was ist in den Preisen inklusive?</summary>
+        <p class="faq-ans">Alles: Aufnahme im eigenen Studio, Schnitt, Rauschen entfernen, Normalisierung und Lieferung im Wunschformat. Korrekturschleifen sind immer inklusive — bis du zufrieden bist.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Kann ich eine kostenlose Hörprobe anfragen?</summary>
+        <p class="faq-ans">Ja — einfach im Anfrageformular „Kostenlose Demo" anklicken. Du bekommst eine Einlesung eines kurzen Ausschnitts deines Textes innerhalb von 24 Stunden. Ohne Verpflichtung.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Wie funktioniert die Buchung ohne langen E-Mail-Austausch?</summary>
+        <p class="faq-ans">So: Preis berechnen → Angebot anfragen (Skript hochladen) → Angebot erhalten → bestätigen → Aufnahme → fertige Files. Oder einfach kurz per WhatsApp melden — dann klären wir alles in wenigen Minuten.</p>
+      </details>
+      <details class="faq-entry">
+        <summary>Für welche Projekte eignet sich der Kalkulator?</summary>
+        <p class="faq-ans">Für alle gängigen Voice-Over-Projekte: Werbung (Radio, TV, Online), Imagefilm, E-Learning, Erklärfilm, Hörbücher, Videospiele und Synchron. Der Kalkulator deckt die drei Hauptkategorien ab — für Spezialfälle einfach kurz melden.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2 class="reveal">Bereit? Dein Voice Over<br>wartet auf dich.</h2>
+    <p class="reveal">Preis berechnen dauert 30 Sekunden. Das Angebot liegt in 8 Stunden in deinem Postfach. Die fertigen Files in 24 Stunden.</p>
+    <div class="cta-btns reveal">
+      <a class="btn" href="#kalkulator">Jetzt Preis berechnen</a>
+      <a class="btn ghost" href="https://wa.me/491713473248?text=Hallo%20Dominik%2C%20ich%20m%C3%B6chte%20ein%20Voice-Over%20buchen." target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-mark reveal">VOICE OVER<br><span>FELLA</span></div>
+    <div class="foot-grid">
+      <ul>
+        <li><a href="/#demos">Demos</a></li>
+        <li><a href="/#kunden">Kunden</a></li>
+        <li><a href="#kalkulator">Preisrechner</a></li>
+        <li><a href="/#ueber">Über mich</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+      </ul>
+      <ul>
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+        <li><a href="#" class="consent-reopen">Datenschutz-Einstellungen</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom reveal">
+      <span>© 2026 Dominik Jungheim · Alle Rechte vorbehalten</span>
+      <a href="https://voiceoverfella.de/preise" style="text-decoration:none">voiceoverfella.de/preise</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CONSENT-BANNER -->
+<div class="consent" id="consent" role="dialog" aria-label="Datenschutz-Hinweis">
+  <div class="consent-inner">
+    <p class="consent-text"><strong>Externe Inhalte &amp; Datenschutz.</strong> Diese Website bettet Videos von YouTube (Google Ireland Ltd.) ein. Beim Laden können Daten – u.&nbsp;a. Ihre IP-Adresse – an Google in die USA übermittelt werden. Möchten Sie externe YouTube-Inhalte laden? Details in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="consent-btns">
+      <button type="button" class="consent-btn decline" id="consent-decline">Ablehnen</button>
+      <button type="button" class="consent-btn accept" id="consent-accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- Reveal-Animation -->
+<script>
+(function(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
+
+<!-- Consent-Logik -->
+<script>
+(function(){
+  const KEY='vof-consent-youtube';
+  const banner=document.getElementById('consent');
+  const reopen=document.querySelector('.consent-reopen');
+  function hide(){banner.classList.remove('show');}
+  function accept(){localStorage.setItem(KEY,'1');hide();}
+  function decline(){localStorage.setItem(KEY,'0');hide();}
+  if(!localStorage.getItem(KEY)){setTimeout(()=>banner.classList.add('show'),800);}
+  document.getElementById('consent-accept').addEventListener('click',accept);
+  document.getElementById('consent-decline').addEventListener('click',decline);
+  if(reopen)reopen.addEventListener('click',e=>{e.preventDefault();banner.classList.add('show');});
+})();
+</script>
+
+<!-- Kalkulator -->
+<script src="kalkulator.js"></script>
+</body>
+</html>
