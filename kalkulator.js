@@ -76,7 +76,7 @@
   }
   // Nutzungsrechte mit Digital-Erklärung (Pixel-Font)
   function nutzungsrechte(){
-    const DESCS=['Nur privat, keine Veröffentlichung','Eigene Kanäle & Social ohne Media-Budget','TV, Radio & bezahlte Ads mit Media-Buy'];
+    const DESCS=['Nur privat, keine Veröffentlichung','Eigene Kanäle, Social Media ohne Media-Budget','TV, Kino, Online, bezahlte Ads mit Media-Budget'];
     const wrap=el('div','rights');
     const lcd=el('div','lcd','<span class="lcd-text"></span>');
     const rk=rockerGroup(['PRIVAT','UNBEZAHLTE MEDIEN','BEZAHLTE MEDIEN'],1,i=>{lcd.querySelector('.lcd-text').textContent=DESCS[i];});
