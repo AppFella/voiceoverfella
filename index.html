@@ -208,6 +208,7 @@ nav{
   border-bottom:2px solid var(--ink);
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+.nav-right{display:flex;align-items:center;gap:1.6rem}
 .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
 .onair{
   display:flex;align-items:center;gap:.45rem;
@@ -238,19 +239,48 @@ body.is-playing .onair{border-color:var(--red);color:var(--red)}
 .btn.ghost{background:var(--paper);color:var(--ink)}
 .btn.dark{background:var(--ink);color:var(--paper);border-color:var(--paper);box-shadow:4px 4px 0 var(--red)}
 .btn.dark:hover{box-shadow:7px 7px 0 var(--red)}
-@media(max-width:860px){.nav-links li:not(.keep){display:none}}
-/* Mobile: ON AIR / Marke / Button jeweils einzeilig in einer Reihe halten */
+/* Burger-Menü (Checkbox-Hack, kein JS) */
+#nav-toggle{display:none}
+.burger{display:none;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center;
+  border:2px solid var(--ink);border-radius:12px;background:var(--paper);
+  box-shadow:3px 3px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.burger:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.burger:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+.burger span{position:relative;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+#nav-toggle:checked ~ .burger span{background:transparent}
+#nav-toggle:checked ~ .burger span::before{top:0;transform:rotate(45deg)}
+#nav-toggle:checked ~ .burger span::after{top:0;transform:rotate(-45deg)}
+
+@media(max-width:860px){
+  .burger{display:inline-flex}
+  .nav-right{gap:.7rem}
+  .nav-links{position:absolute;top:100%;left:0;right:0;
+    background:var(--paper);border-bottom:2px solid var(--ink);
+    flex-direction:column;align-items:stretch;gap:0;padding:.6rem 1.4rem 1.4rem;
+    transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.7,.2,1);
+    box-shadow:0 12px 24px rgba(24,18,30,.18)}
+  .nav-links li{border-top:1px solid rgba(24,18,30,.12)}
+  .nav-links li:first-child{border-top:none}
+  .nav-links a{display:block;padding:1rem .2rem;font-size:1.05rem}
+  .nav-links a::after{display:none}
+  #nav-toggle:checked ~ .nav-right .nav-links{transform:translateY(0)}
+}
+/* Mobile-Priorität: Marke + Button haben Vorrang, ON AIR fliegt bei sehr klein raus */
 @media(max-width:560px){
   .nav-inner{gap:.5rem}
   .brand{gap:.45rem}
-  .onair,.brand-name,.nav-links .btn{white-space:nowrap}
+  .nav-right{gap:.5rem}
+  .onair,.brand-name,.nav-cta{white-space:nowrap}
   .onair{font-size:.56rem;padding:.26rem .5rem;gap:.35rem}
-  .brand-name{font-size:.8rem}
-  .nav-links .btn{font-size:.8rem;padding:.5rem .9rem;box-shadow:3px 3px 0 var(--ink)}
+  .brand-name{font-size:.85rem}
+  .nav-cta{font-size:.78rem;padding:.5rem .9rem;box-shadow:3px 3px 0 var(--ink)}
+  .burger{width:38px;height:38px}
+  .burger span,.burger span::before,.burger span::after{width:18px}
 }
-@media(max-width:400px){
-  .brand-name{display:none}
-  .nav-links .btn{font-size:.75rem;padding:.45rem .75rem}
+@media(max-width:420px){
+  .onair{display:none}
 }
 
 /* ============ HERO ============ */
@@ -535,14 +565,18 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
       <span class="onair"><span class="dot"></span>ON AIR</span>
       <span class="brand-name">VOICE OVER <span>FELLA</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="#demos">Demos</a></li>
-      <li><a href="#kunden">Kunden</a></li>
-      <li><a href="#kalkulator">Preise</a></li>
-      <li><a href="#ablauf">Ablauf</a></li>
-      <li><a href="#ueber">Über mich</a></li>
-      <li class="keep"><a class="btn" href="#kontakt">Stimme buchen</a></li>
-    </ul>
+    <input type="checkbox" id="nav-toggle" aria-label="Menü öffnen">
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#demos">Demos</a></li>
+        <li><a href="#kunden">Kunden</a></li>
+        <li><a href="preise.html">Preise</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#ueber">Über mich</a></li>
+      </ul>
+      <a class="btn nav-cta" href="#kontakt">Stimme buchen</a>
+      <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+    </div>
   </div>
 </nav>
 
