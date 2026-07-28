@@ -489,15 +489,22 @@
     mform.elements['konfiguration'].value=collectSettings().map(it=>it.k+': '+(it.v||'–')).join('\n');
     const preisAnzeige=(document.querySelector('.cdd-num')||{}).textContent||'';
     mform.elements['preis'].value=preisAnzeige&&preisAnzeige!=='0,00'?preisAnzeige+' €':'(noch nicht berechnet)';
-    const submitBtn=mform.querySelector('[type=submit]');
-    submitBtn.disabled=true;submitBtn.textContent='Wird gesendet …';
-    fetch('/',{method:'POST',body:new FormData(mform)})
+    const fd=new FormData(mform);
+    mform.hidden=true;modal.querySelector('.modal-config').hidden=true;
+    const done=modal.querySelector('.modal-done');done.hidden=false;
+    const check=done.querySelector('.md-check');const heading=done.querySelector('h3');const text=done.querySelector('.md-text');
+    check.textContent='…';check.classList.add('pending');
+    heading.textContent='Wird gesendet …';
+    text.textContent='Einen Moment, dein Angebot geht raus.';
+    fetch('/',{method:'POST',body:fd})
       .then(r=>{if(!r.ok)throw new Error(r.status);
-        mform.hidden=true;modal.querySelector('.modal-config').hidden=true;
-        const done=modal.querySelector('.modal-done');done.hidden=false;
-        done.querySelector('.md-text').textContent='Wir haben deine Anfrage erhalten und melden uns innerhalb von 8 Stunden.';
+        check.textContent='✓';check.classList.remove('pending');
+        heading.textContent='Danke!';
+        text.textContent='Wir haben deine Anfrage erhalten und melden uns innerhalb von 8 Stunden.';
         vuKick(.6);})
-      .catch(()=>{submitBtn.disabled=false;submitBtn.textContent='Angebot anfordern';
+      .catch(()=>{
+        done.hidden=true;mform.hidden=false;modal.querySelector('.modal-config').hidden=false;
+        const submitBtn=mform.querySelector('[type=submit]');
         let err=mform.querySelector('.form-err');
         if(!err){err=document.createElement('p');err.className='form-err';
           err.style.cssText='color:var(--red);font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;margin:.4rem 0 0';

@@ -275,6 +275,8 @@ sup.req{font-size:.9em;margin-left:1px}
 .modal-actions .pp-btn{width:100%;justify-content:center;text-align:center;padding:.75rem;font-size:1.05rem}
 .modal-done{text-align:center;padding:1.4rem .5rem 1rem}
 .md-check{width:56px;height:56px;border-radius:50%;background:var(--red);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin:0 auto 1rem;box-shadow:0 5px 0 var(--red-deep)}
+.md-check.pending{background:var(--ink-soft,#4a3f52);box-shadow:0 5px 0 rgba(0,0,0,.25);animation:mdPulse 1.2s ease-in-out infinite}
+@keyframes mdPulse{0%,100%{opacity:.6}50%{opacity:1}}
 .modal-done h3{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--ink)}
 .md-text{margin:.5rem auto 1.2rem;color:var(--ink-soft);max-width:40ch;line-height:1.5}
 @keyframes ledBlink{50%{opacity:.35}}
