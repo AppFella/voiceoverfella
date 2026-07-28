@@ -109,7 +109,7 @@
         {
           "@type": "Question",
           "name": "Was kostet ein professioneller Sprecher?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Projekt ab: Textumfang, Einsatzzweck und Nutzungsrechte (z. B. Online, Radio oder TV) bestimmen den Preis. Deshalb gibt es keine Preisliste von der Stange, sondern ein faires Festpreis-Angebot für dein konkretes Projekt — innerhalb weniger Stunden nach deinem Briefing. So weißt du vorher genau, was es kostet." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Projekt ab: Textumfang, Einsatzzweck und Nutzungsrechte (z. B. Online, Radio oder TV) bestimmen den Preis. Nutze am besten meinen Preisrechner. So weißt du vorher genau, was es kostet." }
         },
         {
           "@type": "Question",
@@ -119,7 +119,7 @@
         {
           "@type": "Question",
           "name": "Kann ich bei der Aufnahme live dabei sein?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Klar! Live-Regie ist per Source-Stream, Zoom oder Telefon möglich. Du hörst in Echtzeit zu, gibst Feedback und wir feilen gemeinsam an der Aufnahme, bis alles sitzt — ganz so, als wärst du mit im Studio." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Klar! Live-Regie ist über diverse Tools oder Telefon möglich. Du hörst in Echtzeit zu, gibst Feedback und wir feilen gemeinsam an der Aufnahme, bis alles sitzt — ganz so, als wärst du mit im Studio." }
         },
         {
           "@type": "Question",
@@ -134,7 +134,7 @@
         {
           "@type": "Question",
           "name": "Für welche Formate kann ich dich buchen?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Werbung (Radio, TV, Online), Synchron, Trailer & Imagefilm, Station-Voice & Rundfunk, E-Learning & Erklärfilm sowie Videospiel-Charaktere. Gesprochen wird auf Deutsch, Englisch (US-Accent) — oder auf Platt." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Da gibt es keine Grenzen. Werbung (Radio, TV, Online), Synchron, Imagefilme, Station-Voice, Rundfunk, E-Learning & Erklärfilme, Hörbücher, Hörspiele, Warteschleifen, Shows und Events, Videospiele oder was dir sonst noch so in den Sinn kommt. Gesprochen wird auf Deutsch oder Englisch." }
         },
         {
           "@type": "Question",
@@ -248,6 +248,10 @@ body.is-playing .onair{border-color:var(--red);color:var(--red)}
   .brand-name{font-size:.8rem}
   .nav-links .btn{font-size:.8rem;padding:.5rem .9rem;box-shadow:3px 3px 0 var(--ink)}
 }
+@media(max-width:400px){
+  .brand-name{display:none}
+  .nav-links .btn{font-size:.75rem;padding:.45rem .75rem}
+}
 
 /* ============ HERO ============ */
 header{
@@ -260,7 +264,7 @@ header{
   border:1.5px solid var(--ink);border-radius:999px;padding:.3rem .85rem;background:var(--paper-soft);
 }
 .hero h1{
-  font-size:clamp(2.9rem,8.4vw,7.4rem);font-weight:800;max-width:14ch;
+  font-size:clamp(2rem,8.4vw,7.4rem);font-weight:800;max-width:14ch;overflow-wrap:break-word;
 }
 .hero h1 em{font-style:normal;color:var(--red);position:relative;white-space:nowrap}
 .hero h1 em svg{position:absolute;left:0;bottom:-.08em;width:100%;height:.22em}
@@ -724,8 +728,8 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
 <section class="kalkulator-sec" id="kalkulator">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="mono kicker" style="color:var(--red)">Preisrechner</span>
-      <h2>Dein Preis. <span class="accent">Sofort.</span></h2>
+      <span class="mono kicker" style="color:var(--red)">Dein Preis. Sofort.</span>
+      <h2>Preis<span class="accent">rechner</span></h2>
       <p class="sec-sub">Kein Hin-und-Her per Mail. Stell dein Projekt zusammen — Genre, Länge, Nutzung — und sieh den Preis auf einen Blick. Danach einfach Angebot anfragen oder direkt per WhatsApp melden.</p>
     </div>
   </div>
@@ -865,7 +869,6 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
         <div class="specs">
           <span class="mono">// Studio-Setup</span>
           <ul>
-            <li>Isovox 2 Booth</li>
              <li>Townsend L22</li>
             <li>Focusrite Clarett 8Pre</li>
             <li>Beyerdynamic DT 770 Pro</li>
@@ -891,7 +894,7 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
     <div class="faq-list">
       <details class="faq-item reveal">
         <summary>Was kostet ein professioneller Sprecher?</summary>
-        <p class="faq-a">Das hängt vom Projekt ab: Textumfang, Einsatzzweck und Nutzungsrechte (z.&nbsp;B. Online, Radio oder TV) bestimmen den Preis. Deshalb gibt es keine Preisliste von der Stange, sondern ein faires Festpreis-Angebot für dein konkretes Projekt — innerhalb weniger Stunden nach deinem Briefing. So weißt du vorher genau, was es kostet.</p>
+        <p class="faq-a">Das hängt vom Projekt ab: Textumfang, Einsatzzweck und Nutzungsrechte (z.&nbsp;B. Online, Radio oder TV) bestimmen den Preis. Nutze am besten meinen Preisrechner. So weißt du vorher genau, was es kostet.</p>
       </details>
       <details class="faq-item reveal">
         <summary>Wie schnell bekomme ich meine Aufnahme?</summary>
@@ -899,7 +902,7 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
       </details>
       <details class="faq-item reveal">
         <summary>Kann ich bei der Aufnahme live dabei sein?</summary>
-        <p class="faq-a">Klar! Live-Regie ist per Source-Stream, Zoom oder Telefon möglich. Du hörst in Echtzeit zu, gibst Feedback und wir feilen gemeinsam an der Aufnahme, bis alles sitzt — ganz so, als wärst du mit im Studio.</p>
+        <p class="faq-a">Klar! Live-Regie ist über diverse Tools oder Telefon möglich. Du hörst in Echtzeit zu, gibst Feedback und wir feilen gemeinsam an der Aufnahme, bis alles sitzt — ganz so, als wärst du mit im Studio.</p>
       </details>
       <details class="faq-item reveal">
         <summary>Gibt es eine kostenlose Hörprobe vor der Buchung?</summary>
@@ -911,11 +914,11 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
       </details>
       <details class="faq-item reveal">
         <summary>Für welche Formate kann ich dich buchen?</summary>
-        <p class="faq-a">Werbung (Radio, TV, Online), Synchron, Trailer &amp; Imagefilm, Station-Voice &amp; Rundfunk, E-Learning &amp; Erklärfilm sowie Videospiel-Charaktere. Gesprochen wird auf Deutsch, Englisch (US-Accent) — oder auf Platt.</p>
+        <p class="faq-a">Werbung (Radio, TV, Online), Synchron, Imagefilm, Station-Voice, Rundfunk, E-Learning, Erklärfilm, Hörbuch, Hörspiel, Warteschleifen, Shows und Events, Videospiel-Charaktere. Gesprochen wird auf Deutsch oder Englisch </p>
       </details>
       <details class="faq-item reveal">
         <summary>Wie läuft eine Remote-Sprachaufnahme ab?</summary>
-        <p class="faq-a">Du schickst mir Skript, Stilrichtung und Referenzen — oder einfach eine grobe Idee. Nach dem Festpreis-Angebot nehme ich in meiner eigenen Studio-Booth auf (48&nbsp;kHz/24&nbsp;bit), auf Wunsch mit Live-Regie. Danach bekommst du sendefertige Files ins Postfach. Remote funktioniert das weltweit — egal ob du in Düsseldorf oder Los Angeles sitzt.</p>
+        <p class="faq-a">Du schickst mir Skript, Stilrichtung und Referenzen — oder einfach eine grobe Idee. Nach dem Festpreis-Angebot nehme ich in meinem eigenen Studio auf (48&nbsp;kHz/24&nbsp;bit), auf Wunsch mit Live-Regie. Danach bekommst du sendefertige Files ins Postfach. Remote funktioniert das weltweit — egal ob du in Düsseldorf oder Los Angeles sitzt.</p>
       </details>
     </div>
   </div>
@@ -961,7 +964,6 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Dominik Jungheim · Alle Rechte vorbehalten</span>
-      <span>100&nbsp;% Mensch · 0&nbsp;% KI-Stimme · Mitglied im VDS</span>
     </div>
   </div>
 </footer>
