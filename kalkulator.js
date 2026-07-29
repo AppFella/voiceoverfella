@@ -330,7 +330,12 @@
       const jahr=jahreLbl==='∞'?3:(jahreLbl==='2 JAHRE'?2:1);
       const gebiet=/WELT/.test(t('#stack .duo .vtk.act .vn'))?3:(/EUROPA/.test(t('#stack .duo .vtk.act .vn'))?2:1);
       if(recht==='PRIVAT'){
-        price=100*minuten;                                     // Jahre + Gebiet ignoriert
+        // Bis 1 Min: 100 · bis 3 Min: 200 · bis 5 Min: 300 · +100 je weitere 5 Min · Jahre + Gebiet ignoriert
+        if(minuten<=0)price=0;
+        else if(minuten<=1)price=100;
+        else if(minuten<=3)price=200;
+        else if(minuten<=5)price=300;
+        else price=300+100*Math.ceil((minuten-5)/5);
       } else if(/UNBEZAHLTE/.test(recht)){
         const base=minuten<=2?350:(minuten<=5?500:500+100*((minuten-5)/5));
         price=base*gebiet;                                     // Jahre ignoriert
@@ -373,7 +378,7 @@
     const disp=el('div','cd-display');
     disp.innerHTML=
       '<div class="cdd-price"><span class="cdd-cur">€</span>&nbsp;<span class="cdd-num">0,00</span></div>'
-      +'<div class="cdd-sub">PREIS / TOTAL</div>'
+      +'<div class="cdd-sub">PREIS / TOTAL · ZZGL. MWST.</div>'
       +'<div class="cdd-foot"><div class="cdd-bar">'+Array(12).fill('<i></i>').join('')+'</div>'
       +'<div class="cdd-calc"><span class="cdd-led"></span>CALC</div></div>';
 
