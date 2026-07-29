@@ -234,7 +234,8 @@ nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(244,236,221,.88)
 .usp-strip{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-top:3rem;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
 .usp-item{display:flex;align-items:center;gap:.6rem;padding:.85rem 1.6rem;border-right:2px solid var(--ink);font-size:.88rem;font-weight:600}
 .usp-item:last-child{border-right:0}
-.usp-item .usp-icon{font-size:1.1rem;flex-none}
+.usp-item .usp-icon{font-size:1.1rem;flex:none;display:inline-flex;align-items:center}
+.usp-item .usp-icon img{width:26px;height:26px;object-fit:contain;display:block;mix-blend-mode:multiply}
 @media(max-width:600px){.usp-strip{flex-direction:column}.usp-item{border-right:0;border-bottom:2px solid var(--ink)}.usp-item:last-child{border-bottom:0}}
 
 /* PROZESS SCHNELL */
@@ -271,7 +272,8 @@ nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(244,236,221,.88)
 .vorteile h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--paper);margin-bottom:.4rem}
 .vorteile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
 .vorteil{background:rgba(244,236,221,.06);border:1px solid rgba(244,236,221,.12);border-radius:var(--radius);padding:1.6rem}
-.vorteil-icon{font-size:1.8rem;margin-bottom:.8rem}
+.vorteil-icon{margin-bottom:.8rem;width:64px;height:64px}
+.vorteil-icon img{width:100%;height:100%;object-fit:contain;display:block;filter:invert(1) hue-rotate(180deg)}
 .vorteil h3{font-family:var(--display);font-weight:800;font-size:1.1rem;color:var(--off);margin-bottom:.4rem}
 .vorteil p{font-size:.9rem;color:rgba(244,236,221,.7);line-height:1.6}
 
@@ -351,10 +353,10 @@ footer{background:var(--ink);color:var(--paper);padding:3.5rem 0 2rem}
       <a class="btn ghost" href="https://wa.me/491713473248?text=Hallo%20Dominik%2C%20ich%20m%C3%B6chte%20ein%20Voice-Over%20buchen." target="_blank" rel="noopener">WhatsApp-Anfrage</a>
     </div>
     <div class="usp-strip reveal">
-      <div class="usp-item"><span class="usp-icon">⚡</span>Angebot in 8 Stunden</div>
-      <div class="usp-item"><span class="usp-icon">✓</span>Fertige Files in 24 Stunden</div>
-      <div class="usp-item"><span class="usp-icon">€</span>Nur Festpreise — keine Überraschungen</div>
-      <div class="usp-item"><span class="usp-icon">🎙</span>15+ Jahre Erfahrung, 1.200+ Buchungen</div>
+      <div class="usp-item"><span class="usp-icon"><img src="bilder/icons/bolt.png" alt="" loading="lazy"></span>Angebot in 8 Stunden</div>
+      <div class="usp-item"><span class="usp-icon"><img src="bilder/icons/check.png" alt="" loading="lazy"></span>Fertige Files in 24 Stunden</div>
+      <div class="usp-item"><span class="usp-icon"><img src="bilder/icons/tag.png" alt="" loading="lazy"></span>Nur Festpreise — keine Überraschungen</div>
+      <div class="usp-item"><span class="usp-icon"><img src="bilder/icons/mic.png" alt="" loading="lazy"></span>15+ Jahre Erfahrung, 1.200+ Buchungen</div>
     </div>
   </div>
 </header>
@@ -424,32 +426,32 @@ footer{background:var(--ink);color:var(--paper);padding:3.5rem 0 2rem}
     </div>
     <div class="vorteile-grid">
       <div class="vorteil reveal">
-        <div class="vorteil-icon">💰</div>
+        <div class="vorteil-icon"><img src="bilder/icons/tag.png" alt="" loading="lazy"></div>
         <h3>Faire Festpreise — transparent</h3>
         <p>Was der Kalkulator zeigt, ist was du zahlst. Kein Verhandeln, keine Studiogebühren on top, keine Folgekosten. Alles inklusive Korrekturschleifen.</p>
       </div>
       <div class="vorteil reveal">
-        <div class="vorteil-icon">⚡</div>
+        <div class="vorteil-icon"><img src="bilder/icons/bolt.png" alt="" loading="lazy"></div>
         <h3>Angebot in 8 Stunden garantiert</h3>
         <p>Kein wochenlanges Warten. Du sendest die Anfrage, ich schreibe zurück — mit konkretem Angebot und Terminvorschlag. Meistens deutlich schneller.</p>
       </div>
       <div class="vorteil reveal">
-        <div class="vorteil-icon">🎙</div>
+        <div class="vorteil-icon"><img src="bilder/icons/mic.png" alt="" loading="lazy"></div>
         <h3>Sendefertig in 24 Stunden</h3>
         <p>Aufgenommen in meiner eigenen Studio-Booth (48 kHz / 24 bit), sauber geschnitten, im Wunschformat — und fertig. Eilprojekte auf Anfrage noch schneller.</p>
       </div>
       <div class="vorteil reveal">
-        <div class="vorteil-icon">🌍</div>
+        <div class="vorteil-icon"><img src="bilder/icons/globe.png" alt="" loading="lazy"></div>
         <h3>Remote buchbar — weltweit</h3>
         <p>Du bist in Hamburg, Zürich oder Los Angeles? Kein Problem. Remote-Projekte sind mein Alltag. Live-Regie per Zoom oder Source-Connect ist jederzeit möglich.</p>
       </div>
       <div class="vorteil reveal">
-        <div class="vorteil-icon">🔄</div>
+        <div class="vorteil-icon"><img src="bilder/icons/refresh.png" alt="" loading="lazy"></div>
         <h3>Korrekturschleifen inklusive</h3>
         <p>Es ist erst erledigt, wenn du zufrieden bist. Korrekturen sind im Preis eingeschlossen — nicht als Extra abgerechnet. Seriös, wie's sein sollte.</p>
       </div>
       <div class="vorteil reveal">
-        <div class="vorteil-icon">🎁</div>
+        <div class="vorteil-icon"><img src="bilder/icons/gift.png" alt="" loading="lazy"></div>
         <h3>Kostenlose Demo deines Textes</h3>
         <p>Unsicher ob die Stimme passt? Fordere eine kostenlose Hörprobe deines Textes an — ohne Verpflichtung, innerhalb von 24 Stunden in deinem Postfach.</p>
       </div>

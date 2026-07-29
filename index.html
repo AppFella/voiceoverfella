@@ -340,12 +340,10 @@ body:not(.is-playing) .eq i{animation-duration:2.8s}
 }
 .badge:hover{transform:translate(-3px,-3px) rotate(-.6deg);box-shadow:10px 10px 0 var(--ink)}
 .badge .icon{
-  width:58px;height:58px;border-radius:50%;border:2px solid var(--ink);
-  display:grid;place-items:center;font-size:1.5rem;background:var(--amber);margin-bottom:1.1rem;
+  width:82px;height:82px;display:grid;place-items:center;margin-bottom:.9rem;
 }
-.badge:nth-child(2) .icon{background:var(--red);color:var(--paper)}
-.badge:nth-child(3) .icon{background:var(--paper-soft)}
-.badge:nth-child(4) .icon{background:var(--ink);color:var(--amber)}
+.badge .icon img{width:100%;height:100%;object-fit:contain;display:block}
+.btn img{width:22px;height:22px;object-fit:contain;display:inline-block;vertical-align:middle;mix-blend-mode:multiply}
 .badge h3{font-size:1.35rem;margin-bottom:.5rem}
 .badge p{font-size:.93rem;color:rgba(24,18,30,.78)}
 @media(max-width:980px){.badges-grid{grid-template-columns:1fr 1fr}}
@@ -622,22 +620,22 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
     </div>
     <div class="badges-grid">
       <div class="badge reveal">
-        <div class="icon">🎙️</div>
+        <div class="icon"><img src="bilder/icons/mic.png" alt="" loading="lazy"></div>
         <h3>Gratis Demo</h3>
         <p>Wenn du dir unsicher bist, fertige ich dir gerne einen Auszug deines Skripts als kostenlose, unverbindliche Demo vorab ein.</p>
       </div>
       <div class="badge reveal">
-        <div class="icon">🔴</div>
+        <div class="icon"><img src="bilder/icons/onair.png" alt="" loading="lazy"></div>
         <h3>Eigenes Tonstudio</h3>
         <p>Akkustisch behandeltes Studio, Broadcast-Signalkette, saubere Files in jedem Format. Sendefertig, ohne dass du nachbearbeiten musst.</p>
       </div>
       <div class="badge reveal">
-        <div class="icon">⚡</div>
+        <div class="icon"><img src="bilder/icons/bolt.png" alt="" loading="lazy"></div>
         <h3>Express-Lieferung</h3>
         <p>Briefing heute, Audio innerhalb von 24 Stunden im Postfach. Deadlines machen mir keine Angst — ich spreche schneller, als mein Schatten.</p>
       </div>
       <div class="badge reveal">
-        <div class="icon">🏆</div>
+        <div class="icon"><img src="bilder/icons/trophy.png" alt="" loading="lazy"></div>
         <h3>1.200+ Buchungen</h3>
         <p>Vom Mittelständler bis zum Weltkonzern. Über 15 Jahre am Mikro — und jede Buchung endete mit einem zufriedenen Kunden.</p>
       </div>
@@ -698,7 +696,7 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
 
       <article class="demo reveal" data-src="audios/explainer.mp3">
         <div class="demo-top"><h3>Erklärfilm</h3><span class="chip">CH 04 · Explainer</span></div>
-        <p class="desc">Führt sicher durchs Thema — von der ersten Sekunde bis zum letzten Frame.</p>
+        <p class="desc">Komplexe Themen, freundlich erklärt — ohne dass jemand wegnickt.</p>
         <div class="player">
           <button class="play-btn" aria-label="Rundfunk-Demo abspielen">
             <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -724,7 +722,7 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
 
       <article class="demo reveal" data-src="audios/image.mp3">
         <div class="demo-top"><h3>Imagefilm</h3><span class="chip">CH 06 · Corporate</span></div>
-        <p class="desc">Komplexe Themen, freundlich erklärt — ohne dass jemand wegnickt. <span class="file-note"></span></p>
+        <p class="desc">Unternehmen und präsentiert wie sie es verdienen.<span class="file-note"></span></p>
         <div class="player">
           <button class="play-btn" aria-label="E-Learning-Demo abspielen">
             <svg class="ico-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -971,7 +969,7 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
       </details>
       <details class="faq-item reveal">
         <summary>Wie schnell bekomme ich meine Aufnahme?</summary>
-        <p class="faq-a">Sendefertige Files liefere ich innerhalb von 24 Stunden nach der Aufnahme — sauber geschnitten, im Wunschformat. Wenn es besonders eilig ist, sag einfach Bescheid.</p>
+        <p class="faq-a">Sendefertige Files liefere ich innerhalb von 24 Stunden — sauber geschnitten, im Wunschformat. Wenn es besonders eilig ist, sag einfach Bescheid.</p>
       </details>
       <details class="faq-item reveal">
         <summary>Kann ich bei der Aufnahme live dabei sein?</summary>
@@ -1004,8 +1002,8 @@ footer{background:var(--ink);color:var(--paper);padding:4.5rem 0 2.5rem}
     <h2>Lass uns was aufnehmen.</h2>
     <p>Schick mir dein Skript, deine Idee oder einfach ein „Moin". Du bekommst schnell eine Antwort, ein faires Angebot — und auf Wunsch eine kostenlose Hörprobe deines Textes.</p>
     <div class="row">
-      <a class="btn dark" href="mailto:contact@voiceoverfella.com?subject=Anfrage%20Voice%20Over">✉️&nbsp; contact@voiceoverfella.com</a>
-      <a class="btn ghost" href="tel:+491713473248">📞&nbsp; +49 171 34 73 248</a>
+      <a class="btn dark" href="mailto:contact@voiceoverfella.com?subject=Anfrage%20Voice%20Over"><img src="bilder/icons/envelope.png" alt="" loading="lazy">&nbsp;contact@voiceoverfella.com</a>
+      <a class="btn ghost" href="tel:+491713473248"><img src="bilder/icons/phone.png" alt="" loading="lazy">&nbsp;+49 171 34 73 248</a>
     </div>
     <div class="meta">
       <a href="https://www.instagram.com/voiceoverfella" target="_blank" rel="noopener">Instagram</a>
